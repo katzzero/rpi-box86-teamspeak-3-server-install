@@ -1,0 +1,13 @@
+[Unit]
+Description=TeamSpeak 3 Server
+After=network.target
+
+[Service]
+User=teamspeak
+WorkingDirectory=/usr/local/ts3/
+ExecStart=/usr/local/ts3/ts3server_startscript.sh start
+Restart=on-failure
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
